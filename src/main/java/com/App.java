@@ -16,6 +16,6 @@ public class App
         System.out.println(outputHelper.generateOutput());
 
         Task task = (com.service.Task) context.getBean("Task");
-        task.execute();
+        System.out.println(task.execute());
     }
 }

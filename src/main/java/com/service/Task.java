@@ -9,7 +9,7 @@ public class Task
         this.service = service;
     }
 
-    public void execute() {
-        service.printHello();
+    public String execute() {
+        return service.printHello();
     }
 }
