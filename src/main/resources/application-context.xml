@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <bean id="OutputHelper" class="com.generator.OutputHelper">
+        <property name="outputGenerator" ref="CsvOutputGenerator"/>
+    </bean>
+
+    <bean id="CsvOutputGenerator" class="com.generator.CsvOutputGenerator"/>
+    <bean id="JsonOutputGenerator" class="com.generator.JsonOutputGenerator"/>
+
+    <bean id="Task" class="com.service.Task">
+        <property name="service" ref="Service"/>
+    </bean>
+
+    <bean id="Service" class="com.service.ServiceImpl">
+        <property name="name" value="Hello world"/>
+    </bean>
+</beans>
